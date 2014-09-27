@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var totalCostTextField: UITextField!
     @IBOutlet weak var totalCostLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        totalCostLabel.text = "Total Cost: " + "$15"
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +24,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func fifteenPercentPressed(sender: AnyObject) {
-    
+        self.updateTotalCostLabelForTip(0.15)
     }
 
     @IBAction func eightteenPercentPressed(sender: AnyObject) {
+        self.updateTotalCostLabelForTip(0.18)
     }
+    
     @IBAction func twentyPercentPressed(sender: AnyObject) {
+        self.updateTotalCostLabelForTip(0.20)
+    }
+    
+    func updateTotalCostLabelForTip(tip: Double) {
+        totalCostTextField.resignFirstResponder()
+        
+        var total = (totalCostTextField.text as NSString).doubleValue
+        
+        let tipCalculator: TipCalculator = TipCalculator(total: total, taxPrecent: 0.07)
+        
+        var totalCost = total + tipCalculator.calcTipWithTipPrecent(tip)
+        
+        totalCostLabel.text = "Total Cost: $\(totalCost)"
     }
 }
 

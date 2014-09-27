@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ggI-Ik-Gfp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -43,7 +42,7 @@
                                     <constraint firstAttribute="width" constant="97" id="urY-UI-ezp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9W-3D-6hp">
                                 <rect key="frame" x="167" y="340" width="33" height="30"/>
@@ -70,6 +69,7 @@
                                 <rect key="frame" x="155" y="429" width="363" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="H0w-8P-owE"/>
+                                    <constraint firstAttribute="width" constant="363" id="ZgI-bv-PBi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,7 +93,6 @@
                             <constraint firstAttribute="centerX" secondItem="QsW-Mo-W2k" secondAttribute="centerX" constant="9" id="Bm3-eI-b6y"/>
                             <constraint firstItem="XJW-0A-l8r" firstAttribute="top" secondItem="QsW-Mo-W2k" secondAttribute="bottom" constant="55" id="DL6-Nr-vzy"/>
                             <constraint firstItem="Juc-b7-Z6F" firstAttribute="top" secondItem="XJW-0A-l8r" secondAttribute="bottom" constant="15" id="Fq2-Wd-ot5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dbk-sl-H5Y" secondAttribute="trailing" constant="66" id="GE8-zr-GbA"/>
                             <constraint firstAttribute="centerX" secondItem="Dbk-sl-H5Y" secondAttribute="centerX" constant="-36.5" id="HdO-rF-P6q"/>
                             <constraint firstItem="y5v-ee-P0F" firstAttribute="leading" secondItem="llb-Cf-Ra1" secondAttribute="trailing" constant="95" id="S6I-dm-NM3"/>
                             <constraint firstItem="QsW-Mo-W2k" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="34" id="V74-2M-hOy"/>
@@ -108,6 +107,7 @@
                     <navigationItem key="navigationItem" id="6zw-ke-lej"/>
                     <connections>
                         <outlet property="totalCostLabel" destination="Dbk-sl-H5Y" id="46O-si-G9f"/>
+                        <outlet property="totalCostTextField" destination="Juc-b7-Z6F" id="03f-gb-XU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
